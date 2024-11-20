@@ -30,7 +30,7 @@ If you do not wish to use an API or observe the API call working, you should not
 
 The project needs to be configured with your Auth0 domain and client ID in order for the authentication flow to work.
 
-To do this, first copy `src/auth_config.json.example` into a new file in the same folder called `src/auth_config.json`, and replace the values with your own Auth0 application credentials, and optionally the base URLs of your application and API:
+To do this, first copy `src/auth_config.example.json` into a new file in the same folder called `src/auth_config.json`, and replace the values with your own Auth0 application credentials, and optionally the base URLs of your application and API:
 
 ```json
 {
@@ -39,6 +39,25 @@ To do this, first copy `src/auth_config.json.example` into a new file in the sam
   "audience": "{YOUR AUTH0 API_IDENTIFIER}",
   "appOrigin": "{OPTIONAL: THE BASE URL OF YOUR APPLICATION (default: http://localhost:3000)}",
   "apiOrigin": "{OPTIONAL: THE BASE URL OF YOUR API (default: http://localhost:3001)}"
+  "juristic": {
+    "connection": "{CONNECTION TO USE}",
+    "webapp": {
+      "client_id": "{WEBAPP CLIENT_ID}",
+      "redirect_uri": "{URL}",
+      "response_type": "{PREFERRED RESPONSE TYPE: SEE AUTH0 DOCS}",
+      "scope": "profile email openid",
+      "audience": "{URL}"
+    },
+    "api": {
+      "base_url": "{API BASE_URL}",
+      "client_id": "{API CLIENT_ID}",
+      "client_secret": "{API CLIENT_SECRET}",
+      "redirect_uri": "{URL}",
+      "response_type": "code",
+      "scope": "profile email openid",
+      "audience": "{URL}"
+    }
+  }
 }
 ```
 
