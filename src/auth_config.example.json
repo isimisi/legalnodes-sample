@@ -1,0 +1,25 @@
+{
+  "domain": "DOMAIN",
+  "clientId": "CLEINT_ID",
+  "audience": "AUDIENCE",
+  "token": "MANGEMENT TOKEN",
+  "juristic": {
+    "connection": "CONNECTION",
+    "webapp": {
+      "client_id": "CLIENT_ID",
+      "redirect_uri": "URL",
+      "response_type": "code",
+      "scope": "profile email openid",
+      "audience": "URL"
+    },
+    "api": {
+      "base_url": "BASE_URL",
+      "client_id": "CLIENT_ID",
+      "client_secret": "CLIENT_SECRET",
+      "redirect_uri": "URL",
+      "response_type": "code",
+      "scope": "profile email openid",
+      "audience": "URL"
+    }
+  }
+}
