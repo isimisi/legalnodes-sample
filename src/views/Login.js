@@ -29,7 +29,7 @@ const OAuthCallback = () => {
       try {
          // Replace with your backend endpoint to exchange code for token
          const response = await fetch(
-            'https://staging-api.juristic.io/oauth/token',
+            `${config.juristic.api.base_url}/oauth/token`,
             {
                method: 'POST',
                headers: {
@@ -62,8 +62,9 @@ const OAuthCallback = () => {
    };
 
    const callJuristicApi = async () => {
+      const config = getConfig();
       try {
-         const response = await fetch(`https://staging-api.juristic.io/api`, {
+         const response = await fetch(`${config.juristic.api.base_url}/api`, {
             headers: {
                Authorization: `Bearer ${accessToken}`,
             },
